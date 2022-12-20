@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function PlayList() {
+export default function VideoDetail() {
     return (
         <div>
-            videos
+            VideoDetail
         </div>
     );
 }

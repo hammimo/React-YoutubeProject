@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function PlayList() {
+export default function NotFound() {
     return (
         <div>
-            videos
+            NotFound
         </div>
     );
 }

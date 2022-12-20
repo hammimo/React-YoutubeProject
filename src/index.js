@@ -3,11 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import NotFound from './page/NotFound';
+import PlayList from './components/main/PlayList';
+import VideoDetail from './components/main/VideoDetail';
 
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <NotFound />,
+    children: [
+      {index: true , element: <PlayList />},
+      {path: 'videos' , element: <PlayList />},
+      {path: 'videos/:keyword' , element: <PlayList />},
+      {path: 'videos/watch/:videoId' , element: <VideoDetail />},
+    ]
+  }
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 
