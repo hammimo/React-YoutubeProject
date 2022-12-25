@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-export default class FakeYoutube {
+export default class Youtube {
     constructor() {
-        
     }
 
     async search(keyword)  {
