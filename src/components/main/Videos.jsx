@@ -3,7 +3,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import VideoCard from './VideoCard';
 import { useYoutubeApi } from '../../context/YoutubeApiContext';
-import FakeYoutubeClient from '../api/FakeYoutubeClient';
 
 export default function Videos() {
     const { keyword } = useParams();
