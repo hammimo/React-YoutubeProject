@@ -3,8 +3,8 @@ import axios from 'axios';
 export default class Youtube {
     constructor() {
         this.httpClient = axios.create({
-            baseURL: 'http://www.googleapis.com/youtube/v3',
-            params: {key: 'process.env.REACT_APP_YOUTUBE_API_KEY'}
+            baseURL: 'http://youtube.googleapis.com/youtube/v3',
+            params: {key: process.env.REACT_APP_YOUTUBE_API_KEY},
         })
     }
 
